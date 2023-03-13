@@ -1,4 +1,4 @@
-# Conversor :tw-1f4b1: - Challenge #2  - ONE Back End - Java
+# Conversor - Challenge #2  - ONE Back End - Java
 
 Challenge propuesto por Alura para realizar un convertidor de divisas, dónde también sugerían que se podría agregar otro convertsor cualquiera, para mi caso le agrege el convertidor de unidades de longitud.
 Ejercicio de lógica de programación por medio de una aplicación desarrollada en lenguaje Java. Para la interfaz de usuario se utilizó la librería nativa Swing.
