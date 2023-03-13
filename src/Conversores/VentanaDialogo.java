@@ -132,10 +132,10 @@ public class VentanaDialogo extends JFrame{
 		// Se establece el texto de la etiqueta.
 		etiquetaPrincipal.setText("Elegir el tipo de Conversor:");
 		// posicion de la eiqueta, como el alto y el ancho.
-		etiquetaPrincipal.setBounds(80, 40, 160, 30);
+		etiquetaPrincipal.setBounds(80, 38, 200, 40);
 		// agregar color a la etiqueta
 		etiquetaPrincipal.setForeground(Color.black);
-		Font font = new Font("Arial", Font.BOLD, 12);
+		Font font = new Font("Arial", Font.BOLD, 15);
 		etiquetaPrincipal.setFont(font);
 		etiquetaPrincipal.setVisible(true);
 		// se agrega la etiqwuta al panel
