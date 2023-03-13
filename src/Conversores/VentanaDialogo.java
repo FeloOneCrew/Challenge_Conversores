@@ -37,6 +37,7 @@ public class VentanaDialogo extends JFrame{
 
 	private void iniciarComponentesPrincipal() {
 		PanelPrincipal();
+		EtiquetasPrincipal();
 		ListasPrincipal();
 		BotonesPrincipal();
 	}
@@ -123,6 +124,23 @@ public class VentanaDialogo extends JFrame{
 		panelUnidades.setLayout(null);
 		ventana3.getContentPane().add(panelUnidades); // agregamos el panel a la ventana.
 	}
+	
+	private void EtiquetasPrincipal() {
+
+		// Creamos la etiqueta
+		JLabel etiquetaPrincipal = new JLabel();
+		// Se establece el texto de la etiqueta.
+		etiquetaPrincipal.setText("Elegir el tipo de Conversor:");
+		// posicion de la eiqueta, como el alto y el ancho.
+		etiquetaPrincipal.setBounds(80, 40, 160, 30);
+		// agregar color a la etiqueta
+		etiquetaPrincipal.setForeground(Color.black);
+		Font font = new Font("Arial", Font.BOLD, 12);
+		etiquetaPrincipal.setFont(font);
+		etiquetaPrincipal.setVisible(true);
+		// se agrega la etiqwuta al panel
+		panelPrincipal.add(etiquetaPrincipal);
+	}
 	private void Etiquetas() {
 
 		// Creamos la etiqueta
@@ -158,7 +176,7 @@ public class VentanaDialogo extends JFrame{
 	}
 	
 	private void EtiquetasIunidades() {
-
+		
 		// Creamos la etiqueta
 		JLabel etiqueta = new JLabel();
 		// Se establece el texto de la etiqueta.
