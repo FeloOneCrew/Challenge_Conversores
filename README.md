@@ -8,7 +8,6 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
   <a href="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/version%20ejecutable/Ejecutable.jar ">  ARCHIVO EJECUTABLE</a>
 </p>
 
-:tw-2b07:
 
 ## Descripción del proyecto
 -  La aplicación inicia con una ventana que permite al usuario escoger el tipo de conversión que desea efectuar. En caso de pulsar el botón de aceptar sin haber escogido el tipo de conversión, la aplicación despliega un mensaje de advertencia.
@@ -57,4 +56,3 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
 <p>
  DESCARGAR EL EJECUTABLE
   <a href="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/version%20ejecutable/Ejecutable.jar ">  ARCHIVO EJECUTABLE</a></p>
-:tw-2b07:
