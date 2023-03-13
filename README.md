@@ -3,8 +3,12 @@
 Challenge propuesto por Alura para realizar un convertidor de divisas, dónde también sugerían que se podría agregar otro convertsor cualquiera, para mi caso le agrege el convertidor de unidades de longitud.
 Ejercicio de lógica de programación por medio de una aplicación desarrollada en lenguaje Java. Para la interfaz de usuario se utilizó la librería nativa Swing.
 
-:tw-2b07: DESCARGA EL EJECUTABLE :tw-2b07:
-[ARCHIVO EJECUTABLE](https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/version%20ejecutable/Ejecutable.jar "EJECUTABLE")
+<p>
+ DESCARGAR EL EJECUTABLE
+  <a href="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/version%20ejecutable/Ejecutable.jar ">  ARCHIVO EJECUTABLE</a>
+</p>
+
+:tw-2b07:
 
 ##Descripción del proyecto
 -  La aplicación inicia con una ventana que permite al usuario escoger el tipo de conversión que desea efectuar. En caso de pulsar el botón de aceptar sin haber escogido el tipo de conversión, la aplicación despliega un mensaje de advertencia.
@@ -48,3 +52,8 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
 <p align="center">
   <img src="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/images/ConversorUnidad2.jpg?raw=true" />
 </p>
+
+<p>
+ DESCARGAR EL EJECUTABLE
+  <a href="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/version%20ejecutable/Ejecutable.jar ">  ARCHIVO EJECUTABLE</a></p>
+:tw-2b07:
