@@ -1,5 +1,7 @@
 package Conversores;
 
+import java.text.DecimalFormat;
+
 public class EquivalenciaDolar extends MonedaUnidades {
 	private double valorEquivDe;
 	private double valorEquivA;
@@ -66,7 +68,7 @@ public class EquivalenciaDolar extends MonedaUnidades {
 
 			switch (super.getDeMoneda()) {
 			case "Peso Colombiano":
-				EquiDolarDe = 4756.53;
+				EquiDolarDe = 4713.69;
 				valorEquivDe = super.getValor() / EquiDolarDe;
 				break;
 	
@@ -83,7 +85,7 @@ public class EquivalenciaDolar extends MonedaUnidades {
 				valorEquivDe = super.getValor() / EquiDolarDe;
 				break;
 			case "Yen Japones":
-				EquiDolarDe = 137.11;
+				EquiDolarDe = 132.96;
 				valorEquivDe = super.getValor() / EquiDolarDe;
 				break;
 			case "Won (KRW)":
@@ -102,7 +104,7 @@ public class EquivalenciaDolar extends MonedaUnidades {
 		
 		switch (super.getAMoneda()) {
 		case "Peso Colombiano":
-			EquiDolarA = 4768;
+			EquiDolarA = 4713.69;
 			valorEquivA = getValorEquivDe() * EquiDolarA;
 			setImagenMoneda("peso-colombiano.png");
 			break;
@@ -118,12 +120,12 @@ public class EquivalenciaDolar extends MonedaUnidades {
 			setImagenMoneda("euro.png");
 			break;
 		case "Libra Esterlina (GBP)":
-			EquiDolarA = 0.84;
+			EquiDolarA = 0.85;
 			valorEquivA = getValorEquivDe() * EquiDolarA;
 			setImagenMoneda("libra-esterlina.png");
 			break;
 		case "Yen Japones":
-			EquiDolarA = 137.11;
+			EquiDolarA = 132.96;
 			valorEquivA = getValorEquivDe() * EquiDolarA;
 			setImagenMoneda("yen.png");
 			break;
@@ -135,7 +137,6 @@ public class EquivalenciaDolar extends MonedaUnidades {
 		default:
 			break;
 		}
-		
 		setValorConvertido(Math.round(valorEquivA));
 		setEstadoImagen(true);
 	}

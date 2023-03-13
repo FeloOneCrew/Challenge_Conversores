@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -43,7 +45,7 @@ public class VentanaDialogo extends JFrame{
 		PanelConversorMoneda();
 		Etiquetas();
 		cajasDeTexto();
-		AreDeTexto();
+		AreaDeTexto();
 		Botones();
 		Listas();
 	}
@@ -53,7 +55,7 @@ public class VentanaDialogo extends JFrame{
 		EtiquetasIunidades();
 		ListasUnidades();
 		cajasDeTextoUnidades();
-		AreDeTextoUnidades();
+		AreaDeTextoUnidades();
 		BotonesUnidades();
 	}
 
@@ -230,6 +232,7 @@ public class VentanaDialogo extends JFrame{
 				"Pie", "Pulgada", "Milla Nautica" };
 		// Creamos la lista desplegable y le pasamos los elementos como parámetro
 		UnidIDesplegable = new JComboBox<>(UniI);
+		UnidIDesplegable.setSelectedItem("Metro");
 		UnidIDesplegable.setBounds(70, 160, 150, 30);
 		panelUnidades.add(UnidIDesplegable);
 
@@ -241,7 +244,7 @@ public class VentanaDialogo extends JFrame{
 		// Agregar objetos al comboBox
 		// DivisasFDesplegable.addItem("Lira Turca");
 		// Seleccionar el item que se ba a mostrar por defecto
-		UnidFDesplegable.setSelectedItem("Dolar");
+		UnidFDesplegable.setSelectedItem("Kilometro(km)");
 		UnidFDesplegable.setBounds(270, 160, 150, 30);
 		panelUnidades.add(UnidFDesplegable);
 	}
@@ -265,7 +268,7 @@ public class VentanaDialogo extends JFrame{
 		panelUnidades.add(valorDe);
 	}
 
-	private void AreDeTexto() {
+	private void AreaDeTexto() {
 		Color color3 = new Color(hex("050505"));
 		Color color4 = new Color(hex("C1D6D7"));
 		// Crear la instancia para la feunte del textarea.
@@ -284,7 +287,7 @@ public class VentanaDialogo extends JFrame{
 		panel.add(result);
 	}
 	
-	private void AreDeTextoUnidades() {
+	private void AreaDeTextoUnidades() {
 		Color color3 = new Color(hex("050505"));
 		Color color4 = new Color(hex("C1D6D7"));
 		// Crear la instancia para la feunte del textarea.
@@ -427,8 +430,12 @@ public class VentanaDialogo extends JFrame{
 					String df = (String) divisasFDesplegable.getSelectedItem();
 					double valor = Integer.parseInt(valorDe.getText());
 					info = new EquivalenciaDolar(di, df, valor);
-					result.setText("El monto ingresado es: " + info.getValor() + "\nEl monto indicado equivale a: \n"
-							+ info.getValorConvertido() + " " + info.getAMoneda());
+					//Formatear valor de salida con sus unidades
+					DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
+					String ValorIngresado= FormDeci.format(info.getValor());
+					String precioFormateado = FormDeci.format(info.getValorConvertido());
+					result.setText("El monto ingresado es: " + ValorIngresado + "\nEl monto indicado equivale a: \n"
+							+ precioFormateado + " " + info.getAMoneda());
 
 					// Creamos la etiqueta para colocar el logo de la divisa
 					etiqImagen2 = new JLabel(new ImageIcon(info.getImagenMoneda()));
@@ -461,8 +468,12 @@ public class VentanaDialogo extends JFrame{
 					String df = (String) UnidFDesplegable.getSelectedItem();
 					double valor = Integer.parseInt(valorDe.getText());
 					infoUnidades = new EquivalenciaMetros(di, df, valor);
-					result.setText("El valor ingresado es: " + infoUnidades.getValor() + "\nEl valor indicado equivale a: \n"
-							+ infoUnidades.getValorConvertido() + " " + infoUnidades.getAMoneda());
+					//Formatear valor de salida con sus unidades
+					DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
+					String ValorIngresado= FormDeci.format(infoUnidades.getValor());
+					String UnidadFormateada= FormDeci.format(infoUnidades.getValorConvertido());
+					result.setText("El valor ingresado es: " + ValorIngresado + "\nEl valor indicado equivale a: \n"
+							+ UnidadFormateada + " " + infoUnidades.getAMoneda()+ "s");
 					
 					btnConvertirUnid.setEnabled(false);
 					result.setVisible(true);
