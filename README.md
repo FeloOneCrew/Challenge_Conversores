@@ -1,4 +1,4 @@
-#Conversor :tw-1f4b1: - Challenge #2  - ONE Back End - Java
+# Conversor :tw-1f4b1: - Challenge #2  - ONE Back End - Java
 
 Challenge propuesto por Alura para realizar un convertidor de divisas, dónde también sugerían que se podría agregar otro convertsor cualquiera, para mi caso le agrege el convertidor de unidades de longitud.
 Ejercicio de lógica de programación por medio de una aplicación desarrollada en lenguaje Java. Para la interfaz de usuario se utilizó la librería nativa Swing.
@@ -10,7 +10,7 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
 
 :tw-2b07:
 
-##Descripción del proyecto
+## Descripción del proyecto
 -  La aplicación inicia con una ventana que permite al usuario escoger el tipo de conversión que desea efectuar. En caso de pulsar el botón de aceptar sin haber escogido el tipo de conversión, la aplicación despliega un mensaje de advertencia.
 
 <p align="center">
@@ -31,7 +31,8 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
  <p align="center">
   <img src="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/images/ConversorMoneda.jpg?raw=true" />
 </p>
-####Ejemplo:
+
+#### Ejemplo:
 - Se realiza la conversion de peso Colombiano a Dolar :tw-1f4b2: :tw-1f1fa-1f1f8:
 <p align="center">
   <img src="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/images/ConversorMoneda2.jpg?raw=true" />
@@ -41,13 +42,13 @@ Ejercicio de lógica de programación por medio de una aplicación desarrollada 
 
 
 - Cuando seleccionamos la opcion:
-####Conversor de Unidades de longitud
+#### Conversor de Unidades de longitud
  Nos va a salir la siguiente ventana, donde el usuario va  a poder escoger la longitud inicial a la longitud final a convertir, y luego trandrá la opción de elegir entre los botones Convertir, Limpiar y Cerrar.
 <p align="center">
   <img src="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/images/ConversorUnidades.jpg?raw=true" />
 </p>
 
-####Ejemplo:
+#### Ejemplo:
 - Se realiza la conversion de metro a kilómetro
 <p align="center">
   <img src="https://github.com/FeloOneCrew/Challenge_Conversores/blob/main/images/ConversorUnidad2.jpg?raw=true" />
