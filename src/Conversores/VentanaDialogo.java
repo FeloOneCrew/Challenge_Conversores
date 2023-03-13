@@ -491,7 +491,7 @@ public class VentanaDialogo extends JFrame{
 					String ValorIngresado= FormDeci.format(infoUnidades.getValor());
 					String UnidadFormateada= FormDeci.format(infoUnidades.getValorConvertido());
 					result.setText("El valor ingresado es: " + ValorIngresado + "\nEl valor indicado equivale a: \n"
-							+ UnidadFormateada + " " + infoUnidades.getAMoneda()+ "s");
+							+ UnidadFormateada + " " + infoUnidades.getAMoneda());
 					
 					btnConvertirUnid.setEnabled(false);
 					result.setVisible(true);
