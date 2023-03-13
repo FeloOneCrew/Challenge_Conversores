@@ -447,28 +447,35 @@ public class VentanaDialogo extends JFrame{
 					String di = (String) divisasIDesplegable.getSelectedItem();
 					String df = (String) divisasFDesplegable.getSelectedItem();
 					double valor = Integer.parseInt(valorDe.getText());
-					info = new EquivalenciaDolar(di, df, valor);
-					//Formatear valor de salida con sus unidades
-					DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
-					String ValorIngresado= FormDeci.format(info.getValor());
-					String precioFormateado = FormDeci.format(info.getValorConvertido());
-					result.setText("El monto ingresado es: " + ValorIngresado + "\nEl monto indicado equivale a: \n"
-							+ precioFormateado + " " + info.getAMoneda());
+					if(valor>=0) {
+						info = new EquivalenciaDolar(di, df, valor);
+						//Formatear valor de salida con sus unidades
+						DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
+						String ValorIngresado= FormDeci.format(info.getValor());
+						String precioFormateado = FormDeci.format(info.getValorConvertido());
+						result.setText("El monto ingresado es: " + ValorIngresado + "\nEl monto indicado equivale a: \n"
+								+ precioFormateado + " " + info.getAMoneda());
 
-					// Creamos la etiqueta para colocar el logo de la divisa
-					etiqImagen2 = new JLabel(new ImageIcon(info.getImagenMoneda()));
-					// posicion de la eiqueta, como el alto y el ancho.
-					etiqImagen2.setBounds(200, 350, 70, 60);
-					// se agrega la etiqwuta al panel
-					panel.add(etiqImagen2);
-					etiqImagen2.setVisible(false);
-					btnConvertir.setEnabled(false);
-					result.setVisible(true);
-					etiqImagen2.setVisible(info.isEstadoImagen());
+						// Creamos la etiqueta para colocar el logo de la divisa
+						etiqImagen2 = new JLabel(new ImageIcon(info.getImagenMoneda()));
+						// posicion de la eiqueta, como el alto y el ancho.
+						etiqImagen2.setBounds(200, 350, 70, 60);
+						// se agrega la etiqwuta al panel
+						panel.add(etiqImagen2);
+						etiqImagen2.setVisible(false);
+						btnConvertir.setEnabled(false);
+						result.setVisible(true);
+						etiqImagen2.setVisible(info.isEstadoImagen());
+					}else {
+						JOptionPane.showMessageDialog(null,
+								"Por favor, ingresar números positivos");
+						valorDe.setText("0");
+					}
 
 				} catch (NumberFormatException excep) {
 					JOptionPane.showMessageDialog(null,
 							"Debes ingresar sólo números, por favor ingresa un dato númerico");
+					valorDe.setText("0");
 				}
 			}
 		};
@@ -485,20 +492,27 @@ public class VentanaDialogo extends JFrame{
 					String di = (String) UnidIDesplegable.getSelectedItem();
 					String df = (String) UnidFDesplegable.getSelectedItem();
 					double valor = Integer.parseInt(valorDe.getText());
-					infoUnidades = new EquivalenciaMetros(di, df, valor);
-					//Formatear valor de salida con sus unidades
-					DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
-					String ValorIngresado= FormDeci.format(infoUnidades.getValor());
-					String UnidadFormateada= FormDeci.format(infoUnidades.getValorConvertido());
-					result.setText("El valor ingresado es: " + ValorIngresado + "\nEl valor indicado equivale a: \n"
-							+ UnidadFormateada + " " + infoUnidades.getAMoneda());
-					
-					btnConvertirUnid.setEnabled(false);
-					result.setVisible(true);
-	
+			
+					if (valor>=0) {
+						infoUnidades = new EquivalenciaMetros(di, df, valor);
+						//Formatear valor de salida con sus unidades
+						DecimalFormat FormDeci = new DecimalFormat("#,##0.00");
+						String ValorIngresado= FormDeci.format(infoUnidades.getValor());
+						String UnidadFormateada= FormDeci.format(infoUnidades.getValorConvertido());
+						result.setText("El valor ingresado es: " + ValorIngresado + "\nEl valor indicado equivale a: \n"
+								+ UnidadFormateada + " " + infoUnidades.getAMoneda());
+						
+						btnConvertirUnid.setEnabled(false);
+						result.setVisible(true);
+					}else {
+						JOptionPane.showMessageDialog(null,
+								"Por favor, ingresar valores positivos");
+						valorDe.setText("0");
+					}
 				} catch (NumberFormatException excep) {
 					JOptionPane.showMessageDialog(null,
 							"Debes ingresar sólo números, por favor ingresa un dato númerico");
+					valorDe.setText("0");
 				}
 			}
 		};
